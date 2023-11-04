@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Conference</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Video Conference</h1>
+        <div id="user-actions">
+            <button id="mute-audio">Mute Audio</button>
+            <button id="mute-video">Mute Video</button>
+            <button id="share-screen">Share Screen</button>
+        </div>
+    </header>
+    <main>
+        <section id="video-container" class="glassmorphic">
+            <div id="local-video" class="video-box">
+                <video id="local-video-element" autoplay muted></video>
+                <div class="user-info">
+                    <img src="user-avatar.jpg" alt="Your Avatar">
+                    <span>Your Name</span>
+                </div>
+            </div>
+            <div id="remote-video" class="video-box">
+                <video id="remote-video-element" autoplay></video>
+                <div class="user-info">
+                    <img src="participant-avatar.jpg" alt="Participant Avatar">
+                    <span>Participant Name</span>
+                </div>
+            </div>
+        </section>
+        <section id="chat-container" class="glassmorphic">
+            <div id="chat-header">
+                <h2>Chat</h2>
+                <button id="expand-chat">Expand</button>
+            </div>
+            <div id="chat-messages">
+                <div class="message received">
+                    <span>Participant Name:</span>
+                    <p>Hello there!</p>
+                </div>
+                <div class="message sent">
+                    <span>Your Name:</span>
+                    <p>Hi! How's it going?</p>
+                </div>
+            </div>
+            <input type="text" id="message-input" placeholder="Type your message">
+            <button id="send-button">Send</button>
+        </section>
+    </main>
+    <footer>
+        <div id="controls" class="glassmorphic">
+            <button id="start-call" class="control-button">Start Call</button>
+            <button id="end-call" class="control-button">End Call</button>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
